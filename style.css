@@ -1,0 +1,126 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1440 px;
+}
+
+.container .first-screen{
+    background-color: #F7F7F7;
+    padding: 120px 148px;
+}
+
+
+/* CSS Code for title */
+.container .first-screen .title{
+    background-color: #ffffff;
+    width: 630px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.container .first-screen .title .heading{
+    font-size: 44px;
+    color: #051B18;
+    line-height: 56px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+.container .first-screen .title .body{
+    font-size: 18px;
+    color: #374946;
+    line-height: 28px;
+}
+
+/* CSS Code for main section */
+.container .first-screen .main{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.container .first-screen .main .table-heading, .table-data, .table-img{
+    height: 52px;
+    border-bottom: 1px solid #e5e3e3;
+    display: flex;
+    align-items: center;
+}
+
+.container .first-screen .main .table-heading{
+    padding-bottom: 10px;
+    font-size: 24px;
+    color: #051B18;  
+    font-weight: 500;
+}
+
+.container .first-screen .main .table-data{
+    font-size: 18px;
+    color: #051B18;
+    font-weight: 500;
+}
+
+.container .first-screen .main .table-3{
+    background-color: #E9F3F2;
+    border-radius: 20px;
+}
+
+.table-3 .table-heading, .table-3 .table-data, .table-3 .table-img{
+    display: flex;
+    justify-content: center;
+}
+
+.table-2 .table-heading, .table-2 .table-data, .table-2 .table-img{
+    display: flex;
+    justify-content: center;
+}
+
+.table-4 .table-heading, .table-4 .table-data, .table-4 .table-img{
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 630px) {
+    .container{
+
+    }
+    .container .first-screen{
+        padding: 0px;
+    }
+    .container .first-screen .title{
+        width: 343px;
+        margin: 0px;
+        padding: 15px 5px;
+        background-color: #F7F7F7;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container {
+        overflow-x: auto;
+    }
+
+    .container .first-screen{
+        padding: 20px 5px;
+    }
+
+    .container .first-screen .main {
+        width: 1000px;
+    }
+}
+
+
+
+
+
+
+
+

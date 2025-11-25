@@ -48,6 +48,8 @@ body{
     background-color: #ffffff;
     border-radius: 15px;
     padding: 15px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .container .first-screen .main .table-heading, .table-data, .table-img{
@@ -90,31 +92,6 @@ body{
     justify-content: center;
 }
 
-@media (max-width: 630px) {
-    .container{
-        width: 100%;
-    }
-    .container .first-screen{
-        padding: 0px;
-    }
-    .container .first-screen .title{
-        width: 343px;
-        margin: 0px;
-        padding: 15px 5px;
-        background-color: #F7F7F7;
-    }
-}
-
-@media (max-width: 1064px) {
-        .container .first-screen .main{
-            overflow-x: auto;
-            overflow-y: hidden;
-            width: 1064px;
-        }
-        .container .first-screen .title{
-            width: 100%;
-        }
-    }
 
 .container .second-screen{
     display: flex;
@@ -218,3 +195,65 @@ body{
 }
 
 
+
+
+@media (max-width: 630px) {
+    .container {
+        width: 100%;
+    }
+
+    .container .first-screen {
+        padding: 0px;
+    }
+
+    .container .first-screen .title {
+        margin: 0px;
+        padding: 15px 5px;
+        background-color: #F7F7F7;
+        width: 100%;
+    }
+
+    .container .first-screen .main {
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 1064px) {
+    .container .first-screen .title {
+        width: 100%;
+    }
+}
+/* 
+
+@media (max-width: 630px) {
+    .container{
+        width: 100%;
+    }
+    .container .first-screen{
+        padding: 0px;
+    }
+    .container .first-screen .title{
+        width: 343px;
+        overflow-x: auto;
+        margin: 0px;
+        padding: 15px 5px;
+        background-color: #F7F7F7;
+    }
+     .container .first-screen .main{
+            overflow-x: auto;
+            
+        }
+}
+
+@media (max-width: 1064px) {
+        .container .first-screen .main{
+            overflow-x: auto;
+            
+        }
+        .container .first-screen .title{
+            width: 100%;
+        }
+    } */

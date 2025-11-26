@@ -1,5 +1,13 @@
 const headers = document.querySelectorAll(".accordion-header");
 
+
+if (headers.length > 0) {
+    const firstBody = headers[0].nextElementSibling;
+    const firstIcon = headers[0].querySelector(".icon");
+    firstBody.style.display = "block"; 
+    firstIcon.textContent = "-";
+}
+
 headers.forEach(header => {
     header.addEventListener("click", () => {
         document.querySelectorAll(".accordion-body").forEach(body => {

@@ -9,14 +9,13 @@ body{
 .container{
     width: px;
 }
-
 .container .first-screen{
     background-color: #F7F7F7;
     padding: 120px 148px;
 }
 
 
-/* CSS Code for title */
+/* Page Title Design */
 .container .first-screen .title{
     background-color: #ffffff;
     max-width: 600px;
@@ -26,7 +25,6 @@ body{
     text-align: center;
     margin-bottom: 48px;
 }
-
 .container .first-screen .title .heading{
     font-size: 44px;
     color: #051B18;
@@ -34,14 +32,13 @@ body{
     padding-bottom: 20px;
     font-weight: 500;
 }
-
 .container .first-screen .title .body{
     font-size: 18px;
     color: #374946;
     line-height: 28px;
 }
 
-/* CSS Code for main section */
+/* Pricing Design */
 .container .first-screen .main{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -51,48 +48,42 @@ body{
     width: 1064px;
     margin: 0 auto;
 }
-
 .container .first-screen .main .table-heading, .table-data, .table-img{
     height: 52px;
     border-bottom: 1px solid #e5e3e3;
     display: flex;
     align-items: center;
 }
-
 .container .first-screen .main .table-heading{
     padding-bottom: 10px;
     font-size: 24px;
     color: #051B18;  
     font-weight: 500;
 }
-
 .container .first-screen .main .table-data{
     font-size: 18px;
     color: #051B18;
     font-weight: 500;
 }
-
 .container .first-screen .main .table-3{
     background-color: #E9F3F2;
     border-radius: 20px;
 }
-
 .table-3 .table-heading, .table-3 .table-data, .table-3 .table-img{
     display: flex;
     justify-content: center;
 }
-
 .table-2 .table-heading, .table-2 .table-data, .table-2 .table-img{
     display: flex;
     justify-content: center;
 }
-
 .table-4 .table-heading, .table-4 .table-data, .table-4 .table-img{
     display: flex;
     justify-content: center;
 }
 
 
+/* Accordion Design */
 .container .second-screen{
     display: flex;
     flex-direction: column;
@@ -108,23 +99,18 @@ body{
     text-align: center;
     padding-top: 20px;
 }
-
-
-
 .accordion{
     width: 600px;
     margin: auto;
 }
-
-.accordion-item{
+.accordion .accordion-item{
     background-color: #e3e3e8;
     margin-bottom: 16px;
     border-radius: 15px;
     overflow: hidden;
     box-sizing: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
-.accordion-header{
+.accordion .accordion-item .accordion-header{
     width: 100%;
     padding:15px;
     font-size: 18px;
@@ -138,19 +124,20 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-
-.icon{
+.accordion .accordion-item .icon{
     font-size: 22px;
     font-weight: bold;
     transition: transform 2s ease;
 }
-
-.accordion-body{
+.accordion .accordion-item .accordion-body{
     display: none;
     padding: 0 15px 15px 15px;
     transition: max-height 2s ease, padding 2s ease;
 }
 
+
+
+/* Bottom Card Design */
 .question-body .question-card{
     height: 244px;
     border-radius: 10px;
@@ -200,8 +187,7 @@ body{
 }
 
 
-
-
+/* Accordion & title & Card responsive design */
 @media (max-width: 600px) {
     .container{
         width: 100%;
@@ -217,11 +203,6 @@ body{
         padding: 15px 0;
         background-color: #F7F7F7;
     }
-     /* .container .first-screen .main{
-            overflow-x: auto;
-            
-        } */
-    
     .accordion{
     max-width: 343px;   
 }
@@ -229,16 +210,6 @@ body{
         max-width: 343px;
     }
 }
-
-@media (max-width: 1064px) {
-        .container .first-screen .main{
-            overflow-x: auto;
-            
-        }
-        .container .first-screen .title{
-            width: 100%;
-        }
-    }
 
 @media(min-width: 601px) and (max-width: 860px) {
         .container{
@@ -256,4 +227,17 @@ body{
         overflow-x: auto;
     }
 }
+
+
+/* Pricing prsponsive design */
+@media (max-width: 1064px) {
+        .container .first-screen .main{
+            overflow-x: auto;
+            
+        }
+        .container .first-screen .title{
+            width: 100%;
+        }
+    }
+
 

@@ -19,7 +19,7 @@ body{
 /* CSS Code for title */
 .container .first-screen .title{
     background-color: #ffffff;
-    width: 630px;
+    max-width: 600px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -48,7 +48,7 @@ body{
     background-color: #ffffff;
     border-radius: 15px;
     padding: 15px;
-    max-width: 1440px;
+    width: 1064px;
     margin: 0 auto;
 }
 
@@ -106,44 +106,49 @@ body{
     font-size: 44px;
     font-weight: 500;
     text-align: center;
+    padding-top: 20px;
 }
 
-.container .second-screen .question-body{
+
+
+.accordion{
     width: 600px;
-    height: 684px;
+    margin: auto;
 }
 
-.question-body .question{
-    height: 408px;
+.accordion-item{
+    background-color: #e3e3e8;
+    margin-bottom: 16px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-sizing: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.question-body .question .question-1{
-    height: 104px;
-    background-color: #FAFAFA;
-    border-radius: 10px;
-    padding: 15px;
-    line-height: 28px;
-}
+.accordion-header{
+    width: 100%;
+    padding:15px;
+    font-size: 18px;
+    text-align: left;
+    border: none;
+    background-color: #e3e3e8;
+    cursor: pointer;
+    outline: none;
 
-.question-body .question .question-1 .ques{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 16px;
+    align-items: center;
 }
 
-.question-body .question .question-2{
-    height: 60px;
-    background-color: #FAFAFA;
-    border-radius: 10px;
-    padding: 15px;
-    line-height: 28px;
-    margin-top: 16px;
+.icon{
+    font-size: 22px;
+    font-weight: bold;
+    transition: transform 2s ease;
 }
 
-.question-body .question .question-2 .ques{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
+.accordion-body{
+    display: none;
+    padding: 0 15px 15px 15px;
+    transition: max-height 2s ease, padding 2s ease;
 }
 
 .question-body .question-card{
@@ -197,55 +202,32 @@ body{
 
 
 
-@media (max-width: 630px) {
-    .container {
-        width: 100%;
-    }
-
-    .container .first-screen {
-        padding: 0px;
-    }
-
-    .container .first-screen .title {
-        margin: 0px;
-        padding: 15px 5px;
-        background-color: #F7F7F7;
-        width: 100%;
-    }
-
-    .container .first-screen .main {
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        white-space: nowrap;
-    }
-}
-
-@media (max-width: 1064px) {
-    .container .first-screen .title {
-        width: 100%;
-    }
-}
-/* 
-
-@media (max-width: 630px) {
+@media (max-width: 600px) {
     .container{
         width: 100%;
+        padding: 0;
     }
     .container .first-screen{
-        padding: 0px;
+        padding: 0;
     }
     .container .first-screen .title{
-        width: 343px;
+        max-width: 375px;
         overflow-x: auto;
         margin: 0px;
-        padding: 15px 5px;
+        padding: 15px 0;
         background-color: #F7F7F7;
     }
-     .container .first-screen .main{
+     /* .container .first-screen .main{
             overflow-x: auto;
             
-        }
+        } */
+    
+    .accordion{
+    max-width: 343px;   
+}
+    .question-card{
+        max-width: 343px;
+    }
 }
 
 @media (max-width: 1064px) {
@@ -256,4 +238,22 @@ body{
         .container .first-screen .title{
             width: 100%;
         }
-    } */
+    }
+
+@media(min-width: 601px) and (max-width: 860px) {
+        .container{
+        width: 100%;
+        padding: 0;
+    }
+    .container .first-screen{
+        padding: 0;
+    }
+    .container .first-screen .title{
+        width: 600px;
+    }
+    .first-screen .main{
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+

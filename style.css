@@ -1,29 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 *{
-    padding: 0%;
-    margin: 0%;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 body{
-    overflow-x: hidden;
+    font-family: "Inter", sans-serif;
 }
 .container{
-    width: px;
+    width: 100%;
 }
 .container .first-screen{
     background-color: #F7F7F7;
     padding: 120px 148px;
+    margin: 0 auto;
 }
-
 
 /* Page Title Design */
 .container .first-screen .title{
-    background-color: #ffffff;
-    max-width: 600px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    background-color: #F7F7F7;
+    max-width: 630px;
+    margin: 0 auto;
     margin-bottom: 48px;
+    text-align: center;
 }
 .container .first-screen .title .heading{
     font-size: 44px;
@@ -31,11 +32,14 @@ body{
     line-height: 56px;
     padding-bottom: 20px;
     font-weight: 500;
+    text-align: center;
 }
 .container .first-screen .title .body{
     font-size: 18px;
+    font-weight: 400;
     color: #374946;
     line-height: 28px;
+    text-align: center;
 }
 
 /* Pricing Design */
@@ -43,44 +47,55 @@ body{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     background-color: #ffffff;
-    border-radius: 15px;
-    padding: 15px;
-    width: 1064px;
+    border-width: 2px 2px 0 2px;
+    border-style: solid;
+    border-color: #F7F7F7;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 100%);
+    padding: 28px 28px 16px 28px;
+    border-radius: 24px;
+    max-width: 1144px;
     margin: 0 auto;
 }
-.container .first-screen .main .table-heading, .table-data, .table-img{
+.table-img-CK{
+    background-image: url(checkmark-circle-02.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.table-img-CO{
+    background-image: url(multiplication-sign.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container .first-screen .main .table-heading, .table-data, .table-img-CK, .table-img-CO{   
+    border-bottom: 1px solid #E8E8E8;
     height: 52px;
-    border-bottom: 1px solid #e5e3e3;
     display: flex;
     align-items: center;
 }
+.table-data:nth-child(15), .table-img-CK:nth-child(15), .table-img-CO:nth-child(15) {
+    border-bottom: none;
+}
 .container .first-screen .main .table-heading{
-    padding-bottom: 10px;
     font-size: 24px;
     color: #051B18;  
     font-weight: 500;
+    padding-bottom: 20px;
 }
 .container .first-screen .main .table-data{
     font-size: 18px;
     color: #051B18;
-    font-weight: 500;
+    font-weight: 400;
 }
 .container .first-screen .main .table-3{
     background-color: #E9F3F2;
     border-radius: 20px;
+    box-shadow: 0 -12px 0 #E9F3F2, 0 2px 0 #E9F3F2
 }
-.table-3 .table-heading, .table-3 .table-data, .table-3 .table-img{
+.table-2 .table-heading, .table-2 .table-data, .table-3 .table-heading, .table-3 .table-data, .table-4 .table-heading, .table-4 .table-data{
     display: flex;
     justify-content: center;
 }
-.table-2 .table-heading, .table-2 .table-data, .table-2 .table-img{
-    display: flex;
-    justify-content: center;
-}
-.table-4 .table-heading, .table-4 .table-data, .table-4 .table-img{
-    display: flex;
-    justify-content: center;
-}
+
 
 
 /* Accordion Design */
@@ -88,156 +103,196 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 100px;
+    padding: 0 420px 100px 420px;
 } 
 .container .second-screen .question-titile{
     width: 432px;
-    height: 112px;
     margin-bottom: 48px;
+}
+
+.container .second-screen .question-titile p{
     font-size: 44px;
     font-weight: 500;
     text-align: center;
-    padding-top: 20px;
+    line-height: 56px;
+    letter-spacing: -1px;
+    color: #051B18;
 }
-.accordion{
+.second-screen .question-body .accordion{
     width: 600px;
     margin: auto;
+    margin-bottom: 32px;
 }
 .accordion .accordion-item{
-    background-color: #e3e3e8;
+    background-color: #F7F7F7;
+    padding: 20px;
     margin-bottom: 16px;
     border-radius: 15px;
     overflow: hidden;
-    box-sizing: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 0 0 1px #F0F0F0;  
 }
 .accordion .accordion-item .accordion-header{
-    width: 100%;
-    padding:15px;
-    font-size: 18px;
-    text-align: left;
+    width: 560px;
+    font-size: 20px;
+    font-weight: 500;
     border: none;
-    background-color: #e3e3e8;
+    background-color: #F7F7F7;
     cursor: pointer;
     outline: none;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .accordion .accordion-item .icon{
-    font-size: 22px;
-    font-weight: bold;
-    transition: transform 2s ease;
+    height: 20px;
+    width: 20px;
+    background-image: url(plus-sign\ \(1\).svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .accordion .accordion-item .accordion-body{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 16px;
+    width: 560px;
     display: none;
-    padding: 0 15px 15px 15px;
-    transition: max-height 2s ease, padding 2s ease;
 }
-
 
 
 /* Bottom Card Design */
 .question-body .question-card{
     height: 244px;
-    border-radius: 10px;
-    margin-top: 30px;
-    background-color: #072B29;
     padding: 40px 24px;
-}
-
-.question-body .question-card .card-logo{
+    border-radius: 20px;
+    background-color: #072B29;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 0 0 1px #072B28;  
+} 
+.question-body .question-card .card-logo{  
     width: 107.51px;
     height: 24px;
-    display: flex;
-    justify-self: center;
+    margin: auto;
     color: #ffffff;
 }
-
 .question-body .question-card .card-descrip{
     width: 332px;
     height: 56px;
     color: #FDFEF6;
-    margin: 20px 0px;
+    margin: 20px auto;
     text-align: center;
-    display: flex;
-    justify-self: center;
-}
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
 
+}
 .question-body .question-card .card-button{
     height: 44px;
     width: 225px;
     background-color: #1E8A7A;
     border-radius: 15px;
-    display: flex;
-    justify-self: center;
+    padding: 8px 20px;
+    margin: auto;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #072B29;
+    box-shadow: 0 0 0 1px #1E8A7A;
 }
 .question-body .question-card .card-button button{
     font-size: 18px;
     font-weight: 500;
+    line-height: 28px;
     background: none;
     border: none;
     color: #FDFEF6;
+    margin: auto;
+}
+
+@media(max-width: 431px){
+    .container .first-screen{
+    background-color: #F7F7F7;
+    padding: 24px 0px;
+    margin: 0;
+}
+    .container .first-screen .title{
+    max-width: 343px;
+    margin-bottom: 24px;
+}
+.container .first-screen .title .heading{
+    font-size: 32px;
+    line-height: 40px;
+}
+.container .first-screen .main{
+    margin: 0;
+    display: grid;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    grid-template-columns: 375px 240px 240px 240px;
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+    padding: 24px;
+    border-radius: 0;
+    max-width: 1068px;
+}
+.container .second-screen{
+    padding: 20px 16px 40px 16px;
+} 
+.container .second-screen .question-titile{
+    width: 303px;
+    margin-bottom: 32px;
+}
+.container .second-screen .question-titile p{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 0;
+    color: #051B18;
+}
+.second-screen .question-body .accordion{
+    width: 343px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.accordion .accordion-item{
+    background-color: #F7F7F7;
+    padding: 20px 16px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: #fff;
+    box-shadow: 0 0 0 1px #F0F0F0;  
+}
+.accordion .accordion-item .accordion-header{
+    width: 303px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    border: none;
+    background-color: #F7F7F7;
+    cursor: pointer;
+    outline: none;
     display: flex;
-    height: 100%;
-    align-items: center;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-content: space-between;
+    text-align: left;
 }
-
-
-/* Accordion & title & Card responsive design */
-@media (max-width: 600px) {
-    .container{
-        width: 100%;
-        padding: 0;
-    }
-    .container .first-screen{
-        padding: 0;
-    }
-    .container .first-screen .title{
-        max-width: 375px;
-        overflow-x: auto;
-        margin: 0px;
-        padding: 15px 0;
-        background-color: #F7F7F7;
-    }
-    .accordion{
-    max-width: 343px;   
+.accordion .accordion-item .accordion-body{
+    width: 303px;
 }
-    .question-card{
-        max-width: 343px;
-    }
+.question-body .question-card{
+    width: 343px;
+    height: 272px;
+    border-radius: 16px;
+    border: none;
 }
-
-@media(min-width: 601px) and (max-width: 860px) {
-        .container{
-        width: 100%;
-        padding: 0;
-    }
-    .container .first-screen{
-        padding: 0;
-    }
-    .container .first-screen .title{
-        width: 600px;
-    }
-    .first-screen .main{
-        width: 100%;
-        overflow-x: auto;
-    }
+.question-body .question-card .card-descrip{
+    width: 239px;
+    height: 84px;
 }
-
-
-/* Pricing prsponsive design */
-@media (max-width: 1064px) {
-        .container .first-screen .main{
-            overflow-x: auto;
-            
-        }
-        .container .first-screen .title{
-            width: 100%;
-        }
-    }
-
-
+}

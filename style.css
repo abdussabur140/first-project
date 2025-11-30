@@ -140,18 +140,22 @@ body{
     font-weight: 500;
     border: none;
     background-color: #F7F7F7;
-    cursor: pointer;
     outline: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.accordion .accordion-item .icon{
+.accordion .accordion-item .accordion-header .question{
+    width: 540px;
+    text-align: left;
+}
+.accordion .accordion-item .accordion-header .icon{
     height: 20px;
     width: 20px;
     background-image: url(plus-sign\ \(1\).svg);
     background-size: cover;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 .accordion .accordion-item .accordion-body{
     font-size: 16px;
@@ -274,12 +278,13 @@ body{
     font-size: 20px;
     font-weight: 400;
     line-height: 28px;
-    border: none;
-    background-color: #F7F7F7;
-    cursor: pointer;
-    outline: none;
     display: flex;
     justify-content: space-between;
+    text-align: left;
+
+}
+.accordion .accordion-item .accordion-header .question{
+    width: 283px;
     text-align: left;
 }
 .accordion .accordion-item .accordion-body{

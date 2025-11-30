@@ -99,18 +99,19 @@ body{
 
 
 /* Accordion Design */
+
 .container .second-screen{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 420px 100px 420px;
 } 
-.container .second-screen .question-titile{
+.container .second-screen .big-screen .question-titile{
     width: 432px;
-    margin-bottom: 48px;
+    margin: 0 auto 48px auto;
+    
 }
-
-.container .second-screen .question-titile p{
+.container .second-screen .big-screen .question-titile p{
     font-size: 44px;
     font-weight: 500;
     text-align: center;
@@ -165,6 +166,9 @@ body{
     display: none;
 }
 
+.container .second-screen .question-body .small-screen{
+    display: none;
+}
 
 /* Bottom Card Design */
 .question-body .question-card{
@@ -217,12 +221,12 @@ body{
 }
 
 @media(max-width: 431px){
-    .container .first-screen{
+.container .first-screen{
     background-color: #F7F7F7;
     padding: 24px 0px;
     margin: 0;
 }
-    .container .first-screen .title{
+.container .first-screen .title{
     max-width: 343px;
     margin-bottom: 24px;
 }
@@ -243,12 +247,20 @@ body{
     border-radius: 0;
     max-width: 1068px;
 }
+
+.container .second-screen .question-body .big-screen{
+    display: none !important;  
+}
+
+.container .second-screen .question-body .small-screen{
+    display: block;
+}
 .container .second-screen{
     padding: 20px 16px 40px 16px;
 } 
 .container .second-screen .question-titile{
     width: 303px;
-    margin-bottom: 32px;
+    margin: 0 auto 32px auto;
 }
 .container .second-screen .question-titile p{
     font-size: 32px;
@@ -256,6 +268,7 @@ body{
     line-height: 40px;
     letter-spacing: 0;
     color: #051B18;
+    text-align: center;
 }
 .second-screen .question-body .accordion{
     width: 343px;
